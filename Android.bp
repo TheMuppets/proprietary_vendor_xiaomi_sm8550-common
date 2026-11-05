@@ -19979,46 +19979,6 @@ prebuilt_etc_xml {
 }
 
 cc_prebuilt_binary {
-    name: "ATFWD-daemon",
-    owner: "xiaomi",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/ATFWD-daemon",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libutils",
-                "libqmi_cci",
-                "libqmi",
-                "libmdmdetect",
-                "libqmi_client_qmux",
-                "libqmi_client_helper",
-                "libqmiservices",
-                "liblog",
-                "libavservices_minijail",
-                "libqmi_common_so",
-                "libbase",
-                "libhidlbase",
-                "vendor.qti.hardware.radio.atcmdfwd@1.0",
-                "vendor.qti.hardware.radio.atcmdfwd-V1-ndk",
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
     name: "TrustedUISampleTAClient",
     owner: "xiaomi",
     target: {
